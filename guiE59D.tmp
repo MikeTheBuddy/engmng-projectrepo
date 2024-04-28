@@ -1,0 +1,758 @@
+[gd_scene load_steps=16 format=3 uid="uid://b5f0yd7dh1u32"]
+
+[ext_resource type="Script" path="res://gui.gd" id="1_ylv8n"]
+[ext_resource type="Theme" uid="uid://nh2gs2ko17dl" path="res://Resources/main_theme.tres" id="2_4mxxn"]
+[ext_resource type="Texture2D" uid="uid://dxra5w61mkdah" path="res://Resources/nine_color_rect_icon.png" id="3_fttj1"]
+[ext_resource type="Texture2D" uid="uid://cl6bqqton520p" path="res://Resources/check_mark.png" id="5_i0cac"]
+[ext_resource type="Texture2D" uid="uid://cf41l62bogh7c" path="res://Resources/down_arrow.png" id="6_t1eb1"]
+[ext_resource type="Texture2D" uid="uid://d2304jf6uislw" path="res://Resources/up_arrow.png" id="6_wsmo6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ras88"]
+texture = ExtResource("3_fttj1")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="Animation" id="Animation_sxuwb"]
+resource_name = "DEBUG_VIEW"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/Answer1Box:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/Answer1Box:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/Answer2Box:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/Answer2Box:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer/Answer3Box:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer/Answer3Box:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VBoxContainer/Answer4Box:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VBoxContainer/Answer4Box:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VBoxContainer/Answer5Box:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_8a2nv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/Answer1Box:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/Answer1Box:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/Answer2Box:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/Answer2Box:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer/Answer3Box:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer/Answer3Box:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VBoxContainer/Answer4Box:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VBoxContainer/Answer4Box:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VBoxContainer/Answer5Box:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("VBoxContainer/Answer5Box:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jp5p3"]
+resource_name = "question1_show"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/Answer1Box:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/Answer1Box:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dq75s"]
+resource_name = "question2_show"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/Answer2Box:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/Answer2Box:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ifvsy"]
+resource_name = "question3_show"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/Answer3Box:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/Answer3Box:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_oimid"]
+resource_name = "question4_show"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/Answer4Box:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/Answer4Box:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s17rr"]
+resource_name = "question5_show"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/Answer5Box:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/Answer5Box:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eukn2"]
+_data = {
+"DEBUG_VIEW": SubResource("Animation_sxuwb"),
+"RESET": SubResource("Animation_8a2nv"),
+"question1_show": SubResource("Animation_jp5p3"),
+"question2_show": SubResource("Animation_dq75s"),
+"question3_show": SubResource("Animation_ifvsy"),
+"question4_show": SubResource("Animation_oimid"),
+"question5_show": SubResource("Animation_s17rr")
+}
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ylv8n")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_fttj1")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Top Message" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ras88")
+text = "Answer the questions here to the best of your ability!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Answer1Box" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Question1" type="Label" parent="VBoxContainer/Answer1Box"]
+custom_minimum_size = Vector2(400, 53)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+text = "How many rugs are in the house?"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Answer1Slider" type="HSlider" parent="VBoxContainer/Answer1Box"]
+custom_minimum_size = Vector2(400, 48)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("2_4mxxn")
+max_value = 10.0
+ticks_on_borders = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer/Answer1Box/Answer1Slider"]
+show_behind_parent = true
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -7.5
+offset_right = 10.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_fttj1")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Answer1SliderLabel" type="Label" parent="VBoxContainer/Answer1Box"]
+custom_minimum_size = Vector2(40, 53)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Answer1SubmitButton" type="Button" parent="VBoxContainer/Answer1Box"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+icon = ExtResource("5_i0cac")
+icon_alignment = 1
+
+[node name="Answer2Box" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Question2" type="Label" parent="VBoxContainer/Answer2Box"]
+custom_minimum_size = Vector2(400, 53)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+text = "How many red books are on the shelves?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Answer2Slider" type="HSlider" parent="VBoxContainer/Answer2Box"]
+custom_minimum_size = Vector2(400, 48)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("2_4mxxn")
+max_value = 10.0
+ticks_on_borders = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer/Answer2Box/Answer2Slider"]
+show_behind_parent = true
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -7.5
+offset_right = 10.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_fttj1")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Answer2SliderLabel" type="Label" parent="VBoxContainer/Answer2Box"]
+custom_minimum_size = Vector2(40, 53)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Answer2SubmitButton" type="Button" parent="VBoxContainer/Answer2Box"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+icon = ExtResource("5_i0cac")
+icon_alignment = 1
+
+[node name="Answer3Box" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Question3" type="Label" parent="VBoxContainer/Answer3Box"]
+custom_minimum_size = Vector2(400, 53)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+text = "There are 6 tables in the house?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TrueButton3" type="Button" parent="VBoxContainer/Answer3Box"]
+custom_minimum_size = Vector2(220, 64)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+toggle_mode = true
+text = "True"
+icon_alignment = 1
+
+[node name="FalseButton3" type="Button" parent="VBoxContainer/Answer3Box"]
+custom_minimum_size = Vector2(220, 64)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+toggle_mode = true
+text = "False"
+icon_alignment = 1
+
+[node name="Answer3SubmitButton" type="Button" parent="VBoxContainer/Answer3Box"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+icon = ExtResource("5_i0cac")
+icon_alignment = 1
+
+[node name="Answer4Box" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Question4" type="Label" parent="VBoxContainer/Answer4Box"]
+custom_minimum_size = Vector2(400, 53)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+text = "There is a yellow book in the house on a shelf?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TrueButton4" type="Button" parent="VBoxContainer/Answer4Box"]
+custom_minimum_size = Vector2(220, 64)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+toggle_mode = true
+text = "True"
+icon_alignment = 1
+
+[node name="FalseButton4" type="Button" parent="VBoxContainer/Answer4Box"]
+custom_minimum_size = Vector2(220, 64)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+toggle_mode = true
+text = "False"
+icon_alignment = 1
+
+[node name="Answer4SubmitButton" type="Button" parent="VBoxContainer/Answer4Box"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+icon = ExtResource("5_i0cac")
+icon_alignment = 1
+
+[node name="Answer5Box" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Question5" type="Label" parent="VBoxContainer/Answer5Box"]
+custom_minimum_size = Vector2(400, 53)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+text = "What time does the clock say?"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Answer5Slider" type="HSlider" parent="VBoxContainer/Answer5Box"]
+custom_minimum_size = Vector2(356, 48)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("2_4mxxn")
+min_value = 4.0
+max_value = 51.0
+value = 4.0
+ticks_on_borders = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer/Answer5Box/Answer5Slider"]
+show_behind_parent = true
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -7.5
+offset_right = 10.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_fttj1")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Answer5SliderLabel" type="Label" parent="VBoxContainer/Answer5Box"]
+custom_minimum_size = Vector2(84, 53)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+text = "1:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Answer5SubmitButton" type="Button" parent="VBoxContainer/Answer5Box"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme = ExtResource("2_4mxxn")
+icon = ExtResource("5_i0cac")
+icon_alignment = 1
+
+[node name="Close" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -68.0
+offset_bottom = 68.0
+grow_horizontal = 0
+focus_mode = 0
+theme = ExtResource("2_4mxxn")
+theme_override_font_sizes/font_size = 32
+icon = ExtResource("6_t1eb1")
+icon_alignment = 1
+
+[node name="Open" type="Button" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -68.0
+offset_top = -68.0
+grow_horizontal = 0
+focus_mode = 0
+theme = ExtResource("2_4mxxn")
+theme_override_font_sizes/font_size = 32
+icon = ExtResource("6_wsmo6")
+icon_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_eukn2")
+}
+
+[connection signal="value_changed" from="VBoxContainer/Answer1Box/Answer1Slider" to="." method="_on_answer_1_slider_value_changed"]
+[connection signal="pressed" from="VBoxContainer/Answer1Box/Answer1SubmitButton" to="." method="_on_answer_1_submit_button_pressed"]
+[connection signal="value_changed" from="VBoxContainer/Answer2Box/Answer2Slider" to="." method="_on_answer_2_slider_value_changed"]
+[connection signal="pressed" from="VBoxContainer/Answer2Box/Answer2SubmitButton" to="." method="_on_answer_2_submit_button_pressed"]
+[connection signal="toggled" from="VBoxContainer/Answer3Box/TrueButton3" to="." method="_on_true_button_3_toggled"]
+[connection signal="toggled" from="VBoxContainer/Answer3Box/FalseButton3" to="." method="_on_false_button_3_toggled"]
+[connection signal="pressed" from="VBoxContainer/Answer3Box/Answer3SubmitButton" to="." method="_on_answer_3_submit_button_pressed"]
+[connection signal="toggled" from="VBoxContainer/Answer4Box/TrueButton4" to="." method="_on_true_button_4_toggled"]
+[connection signal="toggled" from="VBoxContainer/Answer4Box/FalseButton4" to="." method="_on_false_button_4_toggled"]
+[connection signal="pressed" from="VBoxContainer/Answer4Box/Answer4SubmitButton" to="." method="_on_answer_4_submit_button_pressed"]
+[connection signal="value_changed" from="VBoxContainer/Answer5Box/Answer5Slider" to="." method="_on_answer_5_slider_value_changed"]
+[connection signal="pressed" from="VBoxContainer/Answer5Box/Answer5SubmitButton" to="." method="_on_answer_5_submit_button_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Open" to="." method="_on_open_pressed"]

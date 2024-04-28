@@ -1,0 +1,122 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtwxuvr1ywhn4"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_5cxf1"]
+[ext_resource type="Theme" uid="uid://nh2gs2ko17dl" path="res://Resources/main_theme.tres" id="1_gpu27"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rnmwr"]
+
+[sub_resource type="Animation" id="Animation_7u2q4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Titlecard:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(336, 190)]
+}
+
+[sub_resource type="Animation" id="Animation_h6vb6"]
+resource_name = "TitleBob"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Titlecard:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(336, 190), Vector2(336, 200), Vector2(336, 190), Vector2(336, 180)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wlq0b"]
+_data = {
+"RESET": SubResource("Animation_7u2q4"),
+"TitleBob": SubResource("Animation_h6vb6")
+}
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5cxf1")
+
+[node name="MenuOptions" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -22.0
+offset_right = 74.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="MenuOptions"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_gpu27")
+text = "Play"
+
+[node name="ModeSelect" type="OptionButton" parent="MenuOptions"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_gpu27")
+alignment = 1
+item_count = 2
+selected = 0
+popup/item_0/text = "Standard"
+popup/item_0/id = 0
+popup/item_1/text = "Questionnaire"
+popup/item_1/id = 1
+
+[node name="Quit" type="Button" parent="MenuOptions"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_gpu27")
+text = "Quit"
+
+[node name="Titlecard" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 336.0
+offset_top = 190.0
+offset_right = 816.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_gpu27")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rnmwr")
+text = "Home Inspection"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wlq0b")
+}
+
+[connection signal="pressed" from="MenuOptions/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MenuOptions/Quit" to="." method="_on_quit_pressed"]
